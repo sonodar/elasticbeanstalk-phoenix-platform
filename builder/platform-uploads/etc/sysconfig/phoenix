@@ -1,0 +1,17 @@
+# CONSTANTS
+STAGING_NAME="staging"
+LIVE_NAME="current"
+DIR_PREFIX="/var/app"
+EB_DIR="/opt/elasticbeanstalk"
+
+### APP DIRS ###
+export STAGING_DIR="$DIR_PREFIX/$STAGING_NAME"
+export LIVE_DIR="$DIR_PREFIX/$LIVE_NAME"
+export CONFIG_DIR="$DIR_PREFIX/config"
+export PIDFILE="/tmp/phoenix.pid"
+export HOME="$LIVE_DIR"
+
+### APP USER/GROUP ###
+export APP_GROUP=phoenix
+export APP_USER=phoenix
+

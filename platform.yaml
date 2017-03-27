@@ -1,0 +1,31 @@
+# version must be 1.0 (2017/03)
+version: "1.0"
+
+provisioner:
+  # type must be packer (2017/03)
+  type: packer
+  template: custom_platform.json
+  flavor: amazon
+
+metadata:
+  maintainer: ryoheisonoda@outlook.com
+  # There are restrictions on symbols that can be used for description
+  description: Erlang Elixir Phoenix Custom Platform
+  operating_system_name: Amazon linux
+  operating_system_version: 2016.09.1
+  # There are restrictions on symbols that can be used for programming_language_name
+  programming_language_name: Erlang-OTP
+  programming_language_version: "19.3"
+  # There are restrictions on symbols that can be used for framework_name
+  framework_name: Elixir
+  framework_version: "1.4.2"
+
+option_settings:
+  # MIX_ENV default is prod, can be overwritten in the environment
+  - namespace: "aws:elasticbeanstalk:application:environment"
+    option_name: "MIX_ENV"
+    value: "prod"
+  #Uncomment if you deploy with Exrm
+  #- namespace: "aws:elasticbeanstalk:application:environment"
+  #  option_name: "RELX_REPLACE_OS_VARS"
+  #  value: "true"

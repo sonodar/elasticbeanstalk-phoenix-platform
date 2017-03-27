@@ -1,0 +1,1 @@
+../../appdeploy/enact/04-start-phoenix.sh

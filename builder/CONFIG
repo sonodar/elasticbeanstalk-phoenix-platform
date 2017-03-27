@@ -1,0 +1,49 @@
+########################
+# $BUILDER_DIR is a magic property set by the builder.sh script automatically
+#########################
+
+#############
+### NGINX ###
+#############
+SETUP_NGINX_CONFIG_SRC="$BUILDER_DIR/uploads/etc/nginx"
+NGINX_DEST_DIR="/etc/nginx"
+
+######################
+## BEANSTALK CONFIG ##
+######################
+BEANSTALK_DIR="/opt/elasticbeanstalk"
+SETUP_HOOKS_DIR="$BUILDER_DIR/uploads/opt/elasticbeanstalk/hooks"
+SETUP_LOGS_DIR="$BUILDER_DIR/uploads/opt/elasticbeanstalk/tasks"
+
+###################
+## ERLANG CONFIG ##
+###################
+ERLANG_VER=19.3
+
+
+###################
+## ELIXIR CONFIG ##
+###################
+ELIXIR_VER=1.4.2
+ELIXIR_DIR=/opt/elixir
+
+###################
+## NODEJS CONFIG ##
+###################
+NODE_VER=6.10.1
+NODE_DIR=/opt/nodejs
+
+
+########################
+## APPLICATION CONFIG ##
+########################
+STAGING_NAME="staging"
+LIVE_NAME="current"
+DIR_PREFIX="/var/app"
+STAGING_DIR="$DIR_PREFIX/$STAGING_NAME"
+LIVE_DIR="$DIR_PREFIX/$LIVE_NAME"
+CONFIG_DIR="$DIR_PREFIX/config"
+APP_NAME=phoenix
+APP_GROUP=phoenix
+APP_USER=phoenix
+

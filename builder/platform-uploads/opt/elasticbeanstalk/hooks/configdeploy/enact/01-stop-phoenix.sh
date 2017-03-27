@@ -1,0 +1,1 @@
+../../appdeploy/enact/01-stop-phoenix.sh

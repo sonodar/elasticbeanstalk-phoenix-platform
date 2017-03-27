@@ -1,0 +1,1 @@
+../../appdeploy/enact/02-gen-envvars.sh
